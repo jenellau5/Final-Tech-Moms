@@ -196,11 +196,7 @@ a {
         0 0 70px rgba(255, 23, 136, 0.15);
 }
 
-.grad:hover {
-    background: linear-gradient(90deg, #f7e7a4, #d4af37, #f7e7a4);
-    background-size: 200%;
-    animation: shimmer 2s linear infinite;
-}
+
 
 @keyframes shimmer {
     0% {
@@ -539,4 +535,548 @@ a {
 /* Ensure cards used in About have a little extra spacing */
 .section .card {
     margin-top: 6px;
+}
+
+/* ===========================================================
+   CASE STUDY — Rhythm O₂ (Launch by JA)
+   =========================================================== */
+:root {
+    --ja-bg: #0b0b0d;
+    --ja-text: #f6f7fb;
+    --ja-muted: #a0a6b3;
+    --ja-card: #15161a;
+    --ja-gold: #d4af37;
+    --ja-gold-2: #b9922a;
+    --ja-ring: #ff00a8;
+    /* Rhythm O₂ accent */
+    --o2-cyan: #29d3ff;
+    --o2-cyan-deep: #0fb6e0;
+}
+
+.ja-case {
+    background: radial-gradient(1200px 400px at 50% -10%, rgba(255, 0, 168, .12), transparent), var(--ja-bg);
+    color: var(--ja-text);
+    padding: clamp(2rem, 4vw, 4rem) 1rem;
+}
+
+.ja-case__wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ja-case__head {
+    margin-bottom: 1rem;
+}
+
+.ja-chip {
+    display: inline-block;
+    font-size: .8rem;
+    padding: .4rem .7rem;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, .1);
+    color: var(--ja-gold);
+    border: 1px solid rgba(212, 175, 55, .35);
+}
+
+.ja-case__title {
+    margin: .6rem 0 .25rem;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+}
+
+.ja-case__subtitle {
+    color: var(--ja-muted);
+}
+
+.ja-case__grid {
+    display: grid;
+    grid-template-columns: 1.35fr .8fr;
+    gap: 28px;
+    margin-top: 1.2rem;
+}
+
+.ja-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    padding: clamp(1rem, 2vw, 1.4rem);
+    box-shadow: 0 0 0 1px rgba(255, 0, 168, .06), 0 12px 28px rgba(0, 0, 0, .35);
+}
+
+.ja-card h3 {
+    font-size: 1.05rem;
+    margin: .2rem 0 .6rem;
+}
+
+.ja-card--story p {
+    line-height: 1.65;
+    margin: 0 0 .9rem;
+}
+
+.ja-list {
+    margin: .2rem 0 1rem 1.1rem;
+}
+
+.ja-list li {
+    margin: .35rem 0;
+}
+
+.ja-cta {
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.ja-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem 1.05rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.ja-btn:hover {
+    transform: translateY(-1px);
+}
+
+.ja-btn--gold {
+    color: #111;
+    background: linear-gradient(180deg, var(--ja-gold), var(--ja-gold-2));
+    box-shadow: 0 0 24px rgba(212, 175, 55, .18);
+}
+
+.ja-btn--gold:hover {
+    box-shadow: 0 0 36px rgba(212, 175, 55, .28);
+}
+
+.ja-btn--ghost {
+    color: var(--ja-text);
+    border-color: rgba(255, 255, 255, .18);
+    background: rgba(255, 255, 255, .02);
+}
+
+.ja-btn--ghost:hover {
+    border-color: rgba(255, 255, 255, .34);
+}
+
+.ja-side {
+    display: grid;
+    gap: 28px;
+}
+
+.ja-card--tech .ja-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.ja-tag {
+    font-size: .85rem;
+    padding: .45rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(41, 211, 255, .45);
+    background: rgba(41, 211, 255, .1);
+    color: var(--ja-text);
+}
+
+.ja-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: .75rem;
+}
+
+.ja-steps .step {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.ja-steps p {
+    color: var(--ja-text);
+    margin: .2rem 0 0;
+    line-height: 1.55;
+}
+
+.ja-note .ja-micro {
+    color: var(--ja-muted);
+    font-size: .95rem;
+    line-height: 1.6;
+    border-left: 2px solid var(--ja-ring);
+    padding-left: .8rem;
+}
+
+/* Accent underline for Rhythm O₂ headings */
+#case-rhythmo2 .o2-underline {
+    position: relative;
+    padding-bottom: .25rem;
+}
+
+#case-rhythmo2 .o2-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 42px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--o2-cyan), transparent);
+    border-radius: 2px;
+    opacity: .9;
+}
+
+/* Responsive */
+@media (max-width:900px) {
+    .ja-case__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Rhythm O₂ polish (scoped to #case-rhythmo2) ===== */
+
+/* Cyan accent + subtle glow */
+#case-rhythmo2 .ja-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 0 0 1px rgba(255, 0, 168, 0.05),
+        0 14px 28px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(41, 211, 255, 0.06);
+}
+
+#case-rhythmo2 .ja-chip {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.15);
+}
+
+/* Headings: cleaner rhythm + cyan underline on “Services Applied” */
+#case-rhythmo2 h3 {
+    margin: .15rem 0 .5rem;
+    line-height: 1.2;
+}
+
+#case-rhythmo2 .ja-card--stack h3 {
+    position: relative;
+    padding-bottom: .3rem;
+}
+
+#case-rhythmo2 .ja-card--stack h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--o2-cyan), transparent);
+    border-radius: 2px;
+}
+
+/* Body copy spacing for readability */
+#case-rhythmo2 .ja-card--story p {
+    margin: 0 0 1.05rem;
+}
+
+#case-rhythmo2 .ja-list {
+    margin: .3rem 0 1.2rem 1.15rem;
+}
+
+#case-rhythmo2 .ja-list li {
+    margin: .45rem 0;
+}
+
+/* Cyan ghost button for secondary CTA */
+#case-rhythmo2 .ja-btn--ghost {
+    border-color: rgba(41, 211, 255, 0.35);
+    background: rgba(41, 211, 255, 0.08);
+}
+
+#case-rhythmo2 .ja-btn--ghost:hover {
+    border-color: rgba(41, 211, 255, 0.75);
+    box-shadow: 0 0 18px rgba(41, 211, 255, 0.18);
+}
+
+/* Right column list: tighter labels, clearer copy */
+#case-rhythmo2 .ja-steps .step {
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+#case-rhythmo2 .ja-steps li {
+    padding: .3rem 0 .4rem;
+}
+
+/* “Tech Used” tags: make them read cyan */
+#case-rhythmo2 .ja-tag {
+    border-color: rgba(41, 211, 255, 0.5);
+    background: rgba(41, 211, 255, 0.10);
+}
+
+/* Better section top spacing under subtitle */
+#case-rhythmo2 .ja-case__grid {
+    margin-top: 1.6rem;
+}
+
+/* Mobile polish */
+@media (max-width: 900px) {
+    #case-rhythmo2 .ja-case__grid {
+        gap: 22px;
+    }
+
+    #case-rhythmo2 .ja-cta {
+        gap: .7rem;
+    }
+}
+
+/* Rhythm O₂ Palette image */
+.ja-palette {
+    text-align: center;
+    margin: 1.5rem auto 2rem;
+}
+
+.ja-palette img {
+    width: 100%;
+    /* responsive width */
+    max-width: 600px;
+    /* fixes how large it can get */
+    height: auto;
+    /* keeps proportions */
+    border-radius: 12px;
+    /* soft edges */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+/* =====================[ PROJECT PAGE ADDITIONS ]================= */
+
+/* Fix bad calc and logo glow (if not already patched) */
+.container {
+    width: min(calc(100% - 2 * var(--gutter)), var(--maxw));
+}
+
+.header__logo .brand__logo {
+    filter: drop-shadow(0 0 12px rgba(255, 23, 136, .25)) drop-shadow(0 0 28px rgba(255, 23, 136, .15));
+}
+
+/* Minor type helper */
+.h2-like {
+    font-size: var(--h2);
+    margin: 6px 0 12px;
+    font-weight: 800;
+    color: var(--cream);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 28px 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .04));
+}
+
+.timeline__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.timeline__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--gold);
+    box-shadow: 0 0 22px rgba(255, 23, 136, .35);
+    position: relative;
+    top: 6px;
+    left: 12px;
+}
+
+.timeline__card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+}
+
+.timeline__card h4 {
+    margin: 0 0 6px;
+    color: var(--cream);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.chips span {
+    border: 1px solid #444a56;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    color: var(--muted);
+}
+
+/* Q&A grid */
+.qa-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+@media (max-width: 900px) {
+    .qa-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.qa {
+    background: #121318;
+    border: 1px solid #2a2d36;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.qa h3 {
+    margin: 0 0 8px;
+    color: var(--gold);
+}
+
+.qa p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Keep badges clean on dark cards */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.badges span {
+    border: 1px solid #444a56;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =====================[ CLICK-THROUGH ROADMAP ]==================== */
+.steps-nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.step-dot {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    color: var(--cream);
+    font-weight: 700;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+    box-shadow: 0 0 0 0 rgba(255, 23, 136, .0);
+    transition: transform .15s, box-shadow .2s, border-color .2s;
+}
+
+.step-dot:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 23, 136, .45);
+    box-shadow: 0 0 18px rgba(255, 23, 136, .25);
+}
+
+.slides {
+    position: relative;
+    margin-top: 6px;
+}
+
+.step-panel {
+    display: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow-soft);
+}
+
+.step-panel:target {
+    display: block;
+}
+
+.step-panel.is-first {
+    /* default visible if someone lands without a hash */
+    display: block;
+}
+
+.step-title {
+    margin: 0 0 8px;
+    color: var(--gold);
+    font-weight: 800;
+}
+
+.step-body {
+    color: var(--cream);
+    margin: 0 0 10px;
+}
+
+.step-list {
+    margin: 0 0 10px 1.1rem;
+    color: var(--cream);
+}
+
+.step-cta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Chips reuse */
+#tm-present .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#tm-present .chips span {
+    border: 1px solid #444a56;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+/* Make buttons slightly larger for on-stage clicking */
+#tm-present .btn {
+    --padx: 26px;
+    --pady: 14px;
+    font-size: 1.02rem;
+}
+
+/* Nice focus for keyboard navigation while presenting */
+#tm-present :target {
+    scroll-margin-top: 120px;
 }
